@@ -14,11 +14,16 @@ function Sidebar() {
   const [style, setStyle] = useState(
     "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
   );
-
+  const [collapse, setCollapse] = useState(true);
   const [clicks, setClicks] = useState( "nav-link collapsed")
-  const [click1, setClick1] = useState( "false")
-  const [click2, setClick2] = useState( "collapse")
+  const [click1, setClick1] = useState( "nav-link collapsed")
+  const [click2, setClick2] = useState( "nav-link collapsed")
            
+  const handleCollapse = (e) => {
+    e.preventDefault();
+    setCollapse(!collapse)
+    console.log(collapse);
+  }
 
   const changeClicks = () =>{
   
@@ -26,7 +31,6 @@ function Sidebar() {
       setClicks ("nav-link")
 
     }
-    
     else{
       setClicks ("nav-link collapsed")
     }
@@ -102,11 +106,14 @@ function Sidebar() {
 
         {/* <!-- Nav Item - Pages Collapse Menu --> */}
         
-         <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+         <li className="nav-item">
+                <a className="nav-link collapsed" href="#" 
+                data-toggle="collapse" 
+                data-target="#collapseTwo"
+                aria-expanded="true" 
+                aria-controls="collapseTwo" >
+                <i className="fas fa-fw fa-cog"></i>
+                <span>Components</span>
                 </a>
           
           <div
@@ -121,7 +128,7 @@ function Sidebar() {
           
                
              
-                   <a class="collapse-item"  onClick={(e)  => 
+                   <a className="collapse-item"  onClick={(e)  => 
                     {
                       e.preventDefault();
                       navigate ('/Buttons')}} > 
@@ -143,7 +150,7 @@ function Sidebar() {
         </li>
 
         {/* <!-- Nav Item - Utilities Collapse Menu --> */}
-        <li className="nav-item">
+        <li className="nav-item ">
           <a
             className="nav-link collapsed"
             href="#"
@@ -157,7 +164,9 @@ function Sidebar() {
           </a>
           <div
             id="collapseUtilities"
-            className="collapse"
+            className="collapse" 
+            data-toggle="collapse" 
+            data-target="#collapseUtilities"
             aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar"
           >

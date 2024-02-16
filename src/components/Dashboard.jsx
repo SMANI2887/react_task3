@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import { Doughnut, Line } from "react-chartjs-2";
-import { faker } from "faker";
+
 
 ChartJS.register(
   ArcElement,
@@ -29,7 +29,7 @@ export const data = {
   labels: ["Jan", "", "Mar", "", "May", "", "Jul", "", "Sep", "", "Nov", ""],
   datasets: [
     {
-      label: "First dataset",
+      
       data: [
         0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000,
         40000,
@@ -252,7 +252,7 @@ function Dashboard() {
                   export
                   const
                   data={{
-                    labels: ["Red", "Blue", "Yellow"],
+                    labels: ["chech"],
                     datasets: [
                       {
                         label: "# of Votes",
@@ -268,6 +268,12 @@ function Dashboard() {
                           "rgba(255, 206, 86, 1)",
                         ],
                         borderWidth: 1,
+                        // circumference:50,
+                        // offset:50,
+                        // radius:"100%",
+                        cutout:75,
+                        // spacing:-2,
+
                       },
                     ],
                   }}
