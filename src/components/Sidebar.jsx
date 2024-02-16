@@ -1,56 +1,23 @@
 import React, { useState } from "react";
 
-import { Link, BrowserRouter as Router, Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
+import {
+  Link,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+  useNavigate,
+} from "react-router-dom";
 import { ReactDOM } from "react-dom/client";
 import Card from "./pages/Card";
 import { Button } from "bootstrap";
 
-
-
-
 function Sidebar() {
   const navigate = useNavigate();
- 
+
   const [style, setStyle] = useState(
     "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
   );
-  const [collapse, setCollapse] = useState(true);
-  const [clicks, setClicks] = useState( "nav-link collapsed")
-  const [click1, setClick1] = useState( "nav-link collapsed")
-  const [click2, setClick2] = useState( "nav-link collapsed")
-           
-  const handleCollapse = (e) => {
-    e.preventDefault();
-    setCollapse(!collapse)
-    console.log(collapse);
-  }
-
-  const changeClicks = () =>{
-  
-    if(clicks == "nav-link collapsed"){
-      setClicks ("nav-link")
-
-    }
-    else{
-      setClicks ("nav-link collapsed")
-    }
-  }
-  const changeClick1 = () =>{
-  
-    if(click1 == "false"){
-      setClick1 ("true")
-    }else{
-      setClick1 ("false")
-    }
-  }
-  const changeClick2 = () =>{
-  
-    if(click2 == "collapse"){
-      setClick2 ("collapse show")
-    }else{
-      setClick2 ("collapse")
-    }
-  }
 
   const changeStyle = () => {
     if (
@@ -84,18 +51,17 @@ function Sidebar() {
         <hr className="sidebar-divider my-0" />
 
         {/* <!-- Nav Item - Dashboard --> */}
-        <li className="nav-item active">
-          
-          <a className="nav-link" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/')}} > 
-                      
+        <li className="nav-item active cursor">
+          <a
+            className="nav-link"
+            onClick={(event) => {
+              event.preventDefault();
+              navigate("/");
+            }}
+          >
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
           </a>
-
-
         </li>
 
         {/* <!-- Divider --> */}
@@ -105,52 +71,54 @@ function Sidebar() {
         <div className="sidebar-heading">Interface</div>
 
         {/* <!-- Nav Item - Pages Collapse Menu --> */}
-        
-         <li className="nav-item">
-                <a className="nav-link collapsed" href="#" 
-                data-toggle="collapse" 
-                data-target="#collapseTwo"
-                aria-expanded="true" 
-                aria-controls="collapseTwo" >
-                <i className="fas fa-fw fa-cog"></i>
-                <span>Components</span>
-                </a>
-          
+
+        <li className="nav-item">
+          <a
+            className="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="true"
+            aria-controls="collapseTwo"
+          >
+            <i className="fas fa-fw fa-cog"></i>
+            <span>Components</span>
+          </a>
+
           <div
             id="collapseTwo"
             className="collapse"
             aria-labelledby="headingTwo"
             data-parent="#accordionSidebar"
-            
           >
             <div className="bg-white py-2 collapse-inner rounded">
               <h6 className="collapse-header">Custom Components:</h6>
-          
-               
-             
-                   <a className="collapse-item"  onClick={(e)  => 
-                    {
-                      e.preventDefault();
-                      navigate ('/Buttons')}} > 
-                Buttons
-              </a> 
-             
-               <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Card')}} > 
-                      Cards
-                       </a>  
-                
-             
 
-              
+              <a
+                className="collapse-item cursor"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/Buttons");
+                }}
+              >
+                Buttons
+              </a>
+
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Card");
+                }}
+              >
+                Cards
+              </a>
             </div>
           </div>
         </li>
 
         {/* <!-- Nav Item - Utilities Collapse Menu --> */}
-        <li className="nav-item ">
+        <li className="nav-item">
           <a
             className="nav-link collapsed"
             href="#"
@@ -164,36 +132,48 @@ function Sidebar() {
           </a>
           <div
             id="collapseUtilities"
-            className="collapse" 
-            data-toggle="collapse" 
+            className="collapse"
+            data-toggle="collapse"
             data-target="#collapseUtilities"
             aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
               <h6 className="collapse-header">Custom Utilities:</h6>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Color')}} > 
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Color");
+                }}
+              >
                 Colors
               </a>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Border')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Border");
+                }}
+              >
                 Borders
               </a>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Animations')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Animations");
+                }}
+              >
                 Animations
               </a>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Other')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Other");
+                }}
+              >
                 Other
               </a>
             </div>
@@ -226,61 +206,79 @@ function Sidebar() {
           >
             <div className="bg-white py-2 collapse-inner rounded">
               <h6 className="collapse-header">Login Screens:</h6>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Login2')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Login2");
+                }}
+              >
                 Login
               </a>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Register')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Register");
+                }}
+              >
                 Register
               </a>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Forgot_Password')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Forgot_Password");
+                }}
+              >
                 Forgot Password
               </a>
               <div className="collapse-divider"></div>
               <h6 className="collapse-header">Other Pages:</h6>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Page_Error')}}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Page_Error");
+                }}
+              >
                 404 Page
               </a>
-              <a className="collapse-item" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Blank_Page')
-                      }}>
+              <a
+                className="collapse-item cursor"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/Blank_Page");
+                }}
+              >
                 Blank Page
               </a>
             </div>
           </div>
         </li>
         {/* <!-- Nav Item - Charts --> */}
-        <li className="nav-item">
-          <a className="nav-link" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Charts_New')
-                      }}>
+        <li className="nav-item cursor">
+          <a
+            className="nav-link"
+            onClick={(event) => {
+              event.preventDefault();
+              navigate("/Charts_New");
+            }}
+          >
             <i className="fas fa-fw fa-chart-area"></i>
             <span>Charts</span>
           </a>
         </li>
 
         {/* <!-- Nav Item - Tables --> */}
-        <li className="nav-item">
-          <a className="nav-link" onClick={(event)  => 
-                    {
-                      event.preventDefault();
-                      navigate ('/Tables')
-                      }}>
+        <li className="nav-item cursor">
+          <a
+            className="nav-link"
+            onClick={(event) => {
+              event.preventDefault();
+              navigate("/Tables");
+            }}
+          >
             <i className="fas fa-fw fa-table"></i>
             <span>Tables</span>
           </a>
@@ -301,7 +299,7 @@ function Sidebar() {
         <div className="sidebar-card d-none d-lg-flex">
           <img
             className="sidebar-card-illustration mb-2"
-            src="../src/assets/img/undraw_posting_photo.svg"
+            src="../src/assets/img/undraw_rocker.svg"
             alt="..."
           />
           <p className="text-center mb-2">
