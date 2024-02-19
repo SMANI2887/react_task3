@@ -22,10 +22,10 @@ function Animations() {
           </div>
           <div classname="small mb-1">Navbar Dropdown Example:</div>
           <nav classname="navbar navbar-expand navbar-light bg-light mb-4">
-            <a classname="navbar-brand" href="#">Navbar</a>
+            <a classname="navbar-brand" href=''>Navbar</a>
             <ul classname="navbar-nav ml-auto">
               <li classname="nav-item dropdown">
-                <a classname="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a classname="nav-link dropdown-toggle" to="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown
                 </a>
                 <div classname="dropdown-menu dropdown-menu-right animated--grow-in" aria-labelledby="navbarDropdown">

@@ -43,7 +43,7 @@ function Logout() {
                 >
                   Cancel
                 </button>
-                <a class="btn btn-primary" href="login.html">
+                <a class="btn btn-primary" href="#login.html">
                   Logout
                 </a>
               </div>

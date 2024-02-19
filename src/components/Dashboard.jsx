@@ -149,13 +149,13 @@ function Dashboard() {
     <div className="container-fluid">
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-        <a
-          href="#"
+        <Link
+          to=''
           className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
         >
           <i className="fas fa-download fa-sm text-white-50"></i> Generate
           Report
-        </a>
+        </Link>
       </div>
 
       {/* <!-- Content Row --> */}
@@ -271,9 +271,9 @@ function Dashboard() {
                 Earnings Overview
               </h6>
               <div className="dropdown no-arrow">
-                <a
+                <Link
                   className="dropdown-toggle"
-                  href="#"
+                  to=''
                   role=" "
                   id="dropdownMenuLink"
                   data-toggle="dropdown"
@@ -281,22 +281,22 @@ function Dashboard() {
                   aria-expanded="false"
                 >
                   <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
+                </Link>
                 <div
                   className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                   aria-labelledby="dropdownMenuLink"
                 >
                   <div className="dropdown-header">Dropdown Header:</div>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to=''>
                     Action
-                  </a>
-                  <a className="dropdown-item" href="#">
+                  </Link>
+                  <Link className="dropdown-item" to=''>
                     Another action
-                  </a>
+                  </Link>
                   <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to=''>
                     Something else here
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -317,9 +317,9 @@ function Dashboard() {
             <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
               <h6 className="m-0 font-weight-bold text-primary">Revenue Sources</h6>
               <div className="dropdown no-arrow">
-                <a
+                <Link
                   className="dropdown-toggle"
-                  href="#"
+                  to=''
                   role="button"
                   id="dropdownMenuLink"
                   data-toggle="dropdown"
@@ -327,22 +327,22 @@ function Dashboard() {
                   aria-expanded="false"
                 >
                   <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
+                </Link>
                 <div
                   className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                   aria-labelledby="dropdownMenuLink"
                 >
                   <div className="dropdown-header">Dropdown Header:</div>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to=''>
                     Action
-                  </a>
-                  <a className="dropdown-item" href="#">
+                  </Link>
+                  <Link className="dropdown-item" to=''>
                     Another action
-                  </a>
+                  </Link>
                   <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="">
                     Something else here
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -560,16 +560,16 @@ function Dashboard() {
               </div>
               <p>
                 Add some quality, svg illustrations to your project courtesy of{" "}
-                <a target="_blank" rel="nofollow" href="https://undraw.co/">
+                <Link target="_blank" rel="nofollow" to="https://undraw.co/">
                   unDraw
-                </a>
+                </Link>
                 , a constantly updated collection of beautiful svg images that
                 you can use completely free and without attribution!
               </p>
-              <a target="_blank" rel="nofollow" href="https://undraw.co/">
+              <Link target="_blank" rel="nofollow" to="https://undraw.co/">
                 Browse Illustrations on unDraw &rarr;
-              </a>
-            </div>
+              </Link>
+            </div> 
           </div>
           {/* <!-- Approach --> */}
           <div className="card shadow mb-4">

@@ -161,7 +161,7 @@ function Charts_New() {
         Chart.js is a third party plugin that is used to generate the charts in
         this theme. The charts below have been customized - for further
         customization options, please visit the{" "}
-        <a target="_blank" href="https://www.chartjs.org/docs/latest/">
+        <a target="_blank" to="https://www.chartjs.org/docs/latest/">
           official Chart.js documentation
         </a>
         .

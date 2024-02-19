@@ -86,7 +86,7 @@ const [style1, setStyle1] = useState(
                 <li className="nav-item dropdown no-arrow mx-1">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="#"
+                    href='#'
                     id="alertsDropdown"
                     role="button"
                     data-toggle="dropdown"

@@ -8,37 +8,16 @@ function Wrapper({ children }) {
   return (
     <>
       <div id="wrapper">
-        {/* <!-- Page Wrapper --> */}
-        {/* <!-- Content Wrapper --> */}
         <Sidebar />
         <div id="content-wrapper" className="d-flex flex-column">
-          {/* <!-- Main Content --> */}
           <div id="content">
-            {/* <!-- Topbar --> */}
-
             <Topper />
 
-            {/* <!-- End of Topbar --> */}
-
-            {/* <!-- Begin Page Content --> */}
-
             {children}
-
-            {/* <Buttons /> */}
-
-            {/* <!-- Page Heading --> */}
-
-            {/* <!-- End of Main Content --> */}
           </div>
-          {/* <!-- Footer --> */}
+
           <Footer />
-          {/* <!-- End of Footer --> */}
         </div>
-        {/* <!-- End of Content Wrapper --> */}
-
-        {/* <!-- End of Page Wrapper --> */}
-
-        {/* <!-- Scroll to Top Button--> */}
       </div>
 
       <Logout />

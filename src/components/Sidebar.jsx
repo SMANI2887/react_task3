@@ -35,9 +35,9 @@ function Sidebar() {
     <>
       <ul className={style} id="accordionSidebar">
         {/* <!-- Sidebar - Brand --> */}
-        <a
+        <Link
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
+          to='/'
         >
           <div className="sidebar-brand-icon rotate-n-15">
             <i className="fas fa-laugh-wink"></i>
@@ -45,14 +45,14 @@ function Sidebar() {
           <div className="sidebar-brand-text mx-3">
             SB Admin <sup>2</sup>
           </div>
-        </a>
+        </Link>
 
         {/* <!-- Divider --> */}
         <hr className="sidebar-divider my-0" />
 
         {/* <!-- Nav Item - Dashboard --> */}
         <li className="nav-item active cursor">
-          <a
+          <Link
             className="nav-link"
             onClick={(event) => {
               event.preventDefault();
@@ -61,7 +61,7 @@ function Sidebar() {
           >
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
-          </a>
+          </Link>
         </li>
 
         {/* <!-- Divider --> */}
@@ -73,9 +73,9 @@ function Sidebar() {
         {/* <!-- Nav Item - Pages Collapse Menu --> */}
 
         <li className="nav-item">
-          <a
+          <Link
             className="nav-link collapsed"
-            href="#"
+            to=''
             data-toggle="collapse"
             data-target="#collapseTwo"
             aria-expanded="true"
@@ -83,7 +83,7 @@ function Sidebar() {
           >
             <i className="fas fa-fw fa-cog"></i>
             <span>Components</span>
-          </a>
+          </Link>
 
           <div
             id="collapseTwo"
@@ -94,7 +94,7 @@ function Sidebar() {
             <div className="bg-white py-2 collapse-inner rounded">
               <h6 className="collapse-header">Custom Components:</h6>
 
-              <a
+              <Link
                 className="collapse-item cursor"
                 onClick={(e) => {
                   e.preventDefault();
@@ -102,9 +102,9 @@ function Sidebar() {
                 }}
               >
                 Buttons
-              </a>
+              </Link>
 
-              <a
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -112,16 +112,16 @@ function Sidebar() {
                 }}
               >
                 Cards
-              </a>
+              </Link>
             </div>
           </div>
         </li>
-
+                
         {/* <!-- Nav Item - Utilities Collapse Menu --> */}
         <li className="nav-item">
-          <a
+          <Link
             className="nav-link collapsed"
-            href="#"
+            to=''
             data-toggle="collapse"
             data-target="#collapseUtilities"
             aria-expanded="true"
@@ -129,7 +129,7 @@ function Sidebar() {
           >
             <i className="fas fa-fw fa-wrench"></i>
             <span>Utilities</span>
-          </a>
+          </Link>
           <div
             id="collapseUtilities"
             className="collapse"
@@ -140,7 +140,7 @@ function Sidebar() {
           >
             <div className="bg-white py-2 collapse-inner rounded">
               <h6 className="collapse-header">Custom Utilities:</h6>
-              <a
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -148,8 +148,8 @@ function Sidebar() {
                 }}
               >
                 Colors
-              </a>
-              <a
+              </Link>
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -157,8 +157,8 @@ function Sidebar() {
                 }}
               >
                 Borders
-              </a>
-              <a
+              </Link>
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -166,8 +166,8 @@ function Sidebar() {
                 }}
               >
                 Animations
-              </a>
-              <a
+              </Link>
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -175,7 +175,7 @@ function Sidebar() {
                 }}
               >
                 Other
-              </a>
+              </Link>
             </div>
           </div>
         </li>
@@ -187,9 +187,9 @@ function Sidebar() {
         <div className="sidebar-heading">Addons</div>
         {/* <!-- Nav Item - Pages Collapse Menu --> */}
         <li className="nav-item">
-          <a
+          <Link
             className="nav-link collapsed"
-            href="#"
+            to=''
             data-toggle="collapse"
             data-target="#collapsePages"
             aria-expanded="true"
@@ -197,7 +197,7 @@ function Sidebar() {
           >
             <i className="fas fa-fw fa-folder"></i>
             <span>Pages</span>
-          </a>
+          </Link>
           <div
             id="collapsePages"
             className="collapse"
@@ -206,7 +206,7 @@ function Sidebar() {
           >
             <div className="bg-white py-2 collapse-inner rounded">
               <h6 className="collapse-header">Login Screens:</h6>
-              <a
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -214,8 +214,8 @@ function Sidebar() {
                 }}
               >
                 Login
-              </a>
-              <a
+              </Link>
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -223,8 +223,8 @@ function Sidebar() {
                 }}
               >
                 Register
-              </a>
-              <a
+              </Link>
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -232,10 +232,10 @@ function Sidebar() {
                 }}
               >
                 Forgot Password
-              </a>
+              </Link>
               <div className="collapse-divider"></div>
               <h6 className="collapse-header">Other Pages:</h6>
-              <a
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -243,8 +243,8 @@ function Sidebar() {
                 }}
               >
                 404 Page
-              </a>
-              <a
+              </Link>
+              <Link
                 className="collapse-item cursor"
                 onClick={(event) => {
                   event.preventDefault();
@@ -252,13 +252,13 @@ function Sidebar() {
                 }}
               >
                 Blank Page
-              </a>
+              </Link>
             </div>
           </div>
         </li>
         {/* <!-- Nav Item - Charts --> */}
         <li className="nav-item cursor">
-          <a
+          <Link
             className="nav-link"
             onClick={(event) => {
               event.preventDefault();
@@ -267,12 +267,12 @@ function Sidebar() {
           >
             <i className="fas fa-fw fa-chart-area"></i>
             <span>Charts</span>
-          </a>
+          </Link>
         </li>
 
         {/* <!-- Nav Item - Tables --> */}
         <li className="nav-item cursor">
-          <a
+          <Link
             className="nav-link"
             onClick={(event) => {
               event.preventDefault();
@@ -281,7 +281,7 @@ function Sidebar() {
           >
             <i className="fas fa-fw fa-table"></i>
             <span>Tables</span>
-          </a>
+          </Link>
         </li>
         {/* <!-- Divider --> */}
         <hr className="sidebar-divider d-none d-md-block" />
@@ -306,12 +306,12 @@ function Sidebar() {
             <strong>SB Admin Pro</strong> is packed with premium features,
             components, and more!
           </p>
-          <a
+          <Link
             className="btn btn-success btn-sm"
-            href="https://startbootstrap.com/theme/sb-admin-pro"
+            to="https://startbootstrap.com/theme/sb-admin-pro"
           >
             Upgrade to Pro!
-          </a>
+          </Link>
         </div>
         {/* <!-- End of Sidebar --> */}
       </ul>
